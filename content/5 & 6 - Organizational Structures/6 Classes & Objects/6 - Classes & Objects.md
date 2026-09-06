@@ -116,13 +116,15 @@ public class Main {
 }
 ```
 
-You might ask: Why do we need `new` in `className objectName = new className();`?
+You might ask: Why do we need `new`?
 
-To put simply, `new` is just a way to tell Java: *"Create a new copy of the `className` in memory!"* and *"assign that new copy to the variable `objectName`"*
+Simply put, `new` tells Java: **"Hey, CREATE this person!!"**
 
-In our case, writing `Person brooke;` only creates a name tag (or a reference variable) and *it doesn't create an actual person yet.* Because `new` is called twice, once for `brooke` and once for `martin`, **we get two different people.** *(Java gives each of them their own separate space in the memory.)*
+Writing `Person brooke;` only creates a name tag *(or reference)*. It doesn't create an actual person yet. 
 
-So even though they share the exact same blueprint which is `Person`, whatever values you store in `brooke` *(e.g. brooke.age = 17)* won't affect `martin` and vice versa.
+When you write `new Person()`, Java actually creates that person for you. Because we called `new` twice, once for `brooke` and once for `martin`, we get two completely separate people. 
+
+Even though they share the same `Person` blueprint, whatever values you give to `brooke` won't affect `martin`, and vice versa.
 
 ## Modifiers
 Now, if you recall the lesson from [[5.3 - Access & Non-Access Modifiers]], you'll know the concept of *modifiers* and those same modifiers apply too! Though again, just like in the lesson, you really must only *start* with like **3**: 
